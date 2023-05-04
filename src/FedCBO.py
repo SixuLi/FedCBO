@@ -227,9 +227,9 @@ class FedCBO_NN:
             # Check the correctness of selecting process
             same_cluster_agents = np.where(self.dataset['train']['cluster_assign'][A_t] ==
                                            self.dataset['train']['cluster_assign'][agent_idx])[0]
-            logging.info(
-                'Num of agents in same cluster / Num of selected agents: {}/{}'.format(same_cluster_agents.size,
-                                                                                       A_t.size))
+            # logging.info(
+            #     'Num of agents in same cluster / Num of selected agents: {}/{}'.format(same_cluster_agents.size,
+            #                                                                            A_t.size))
             with open(os.path.join(self.train_init.output_path, 'check_state.txt'), 'a') as f:
                 f.write(
                     'Num of agents in same cluster / Num of selected agents: {}/{}\n'.format(same_cluster_agents.size,
